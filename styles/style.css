@@ -40,8 +40,7 @@ ol {
 
 .content {
   display: grid;
-  grid-template-columns: 70% 30%;
-  grid-template-rows: repeat(1 1fr);
+  grid-template-columns: 62.9% 37%;
   max-width: 1140px;
   min-height: 100%;
   margin: 133px 30px;
@@ -50,7 +49,6 @@ ol {
 
 .result {
   max-width: 711px;
-  margin-left: 87px;
 }
 
 .result__video-container {
@@ -86,7 +84,7 @@ ol {
 .button {
   color: #fff;
   text-align: center;
-  font-family: Fira Sans Condensed, sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -96,12 +94,13 @@ ol {
 }
 
 .button:focus {
-  border: 3px solid #fff;
+  border: 1px solid #fff;
+  outline: 1px solid #fff;
+  outline-offset: 2px;
 }
 
 .button:active {
-  background-color: #545050
-  
+  background-color: #545050;
 }
 
 .button:hover {
@@ -138,6 +137,7 @@ ol {
   max-height: 103px;
   align-items: start;
   justify-content: space-between;
+  padding-left: 2px;
 }
 
 .content__list-item:hover {
@@ -148,8 +148,14 @@ ol {
   background-color: #545050;
 }
 
-.content__list-item:focus {
-  outline: 3px solid #fff;
+.content__card-link_current:focus-within {
+  background-color: #545050;
+  height: 103px;
+}
+
+.content__card-link:focus {
+  outline: 0;
+  border: 1px solid #fff;
 }
 
 .content__details {
@@ -157,18 +163,19 @@ ol {
   max-height: 530px;
 }
 
-li:not(:last-child) {
+.content__list-item:not(:last-child) {
   margin-bottom: 35px;
 }
 
 .content__video-card {
   display: flex;
   align-items: start;
+  height: 103px;
 }
 
 .content__video-card-thumbnail {
   flex-basis: 194px;
-  max-height: 103px;
+  max-height: 101px;
   object-position: center;
   object-fit: cover;
   margin-bottom: 10px;
@@ -178,6 +185,8 @@ li:not(:last-child) {
   flex-basis: auto;
   flex-grow: 1;
   margin-right: 8px;
+  width: 200px;
+  height: 101px;
 }
 
 .title {
@@ -197,7 +206,7 @@ li:not(:last-child) {
 
 .content__card-link {
   text-decoration: none;
-  
+  height: 105px;
 }
 
 .content__video-card-title {
@@ -208,28 +217,25 @@ li:not(:last-child) {
   font-weight: 700;
   line-height: 35px;
   text-transform: uppercase;
+  margin-top: 3px;
 }
 
 .content__video-card-description {
   color: #fff;
-  font-family: Fira Sans Condensedald, sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
 }
 
-.content__video-card-description-container {
-  width: 200px;
-  height: 101px;
-}
-
 .search-form__fieldset-title {
   color: #fff;
-  font-family: Fira Sans Condense, sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 33px;
+  letter-spacing: 1px;
 }
 
 .search-form__label {
@@ -237,19 +243,24 @@ li:not(:last-child) {
   justify-content: center;
   align-items: center;
   color: #fff;
-  font-family: Fira Sans Condensed, sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   appearance: none;
   gap: 6px;
 }
 
 .search-form__textfield {
-  width: fit-content;
+  color: #fff;
+  font-family: inherit;
+  width: 225px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   border-right: 0;
   border-left: 0;
-  font-size: 17px;
-  letter-spacing: -0.5px;
+  font-size: 17.1px;
+  word-spacing: -2px;
+  letter-spacing: 0.3px;
+  height: 27px;
+  font-weight: 500;
 }
 
 .search-form__textfield:focus {
@@ -270,7 +281,7 @@ input {
 
 .search-form__label-text {
   color: #fff;
-  font-family: Fira Sans Condensed, sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
 }
 
@@ -279,7 +290,7 @@ input {
   cursor: pointer;
 }
 
-.search-form__label:hover {
+.search-form__label_checkbox:hover {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -290,8 +301,8 @@ input {
   border: none;
   font-weight: 400;
   text-align: center;
-  margin-left: 4px;
-  margin-right: -4px;
+  margin-right: -2px;
+  padding-bottom: 2px;
 }
 
 .visually-hidden {
@@ -324,4 +335,8 @@ input[type="checkbox"]:checked + span {
   background: #fff;
   outline: 1px solid white;
   border: 2px solid black;
+}
+
+.search-form__fieldset-title__checkbox {
+  margin-bottom: -3px;
 }

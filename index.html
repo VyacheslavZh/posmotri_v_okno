@@ -23,16 +23,20 @@
               <span class="search-form__label-text visually-hidden">Город</span>
               <input
                 type="text"
-                placeholder="Санкт Петербург, например"
+                placeholder="Санкт-Петербург, например"
                 name="city"
                 class="search-form__textfield"
               />
             </label>
           </fieldset>
           <fieldset class="search-form__fieldset">
-            <h2 class="search-form__fieldset-title">Время суток</h2>
+            <h2
+              class="search-form__fieldset-title search-form__fieldset-title__checkbox"
+            >
+              Время суток
+            </h2>
             <div class="search-form__checkbox-list">
-              <label class="search-form__label">
+              <label class="search-form__label search-form__label_checkbox">
                 <input
                   type="checkbox"
                   name="time"
@@ -42,7 +46,7 @@
                 <span class="search-form__pseudo-checkbox"></span>
                 <span class="search-form__label-text">Утро</span>
               </label>
-              <label class="search-form__label">
+              <label class="search-form__label search-form__label_checkbox">
                 <input
                   type="checkbox"
                   name="time"
@@ -52,7 +56,7 @@
                 <span class="search-form__pseudo-checkbox"></span>
                 <span class="search-form__label-text">День</span>
               </label>
-              <label class="search-form__label">
+              <label class="search-form__label search-form__label_checkbox">
                 <input
                   type="checkbox"
                   name="time"
@@ -76,7 +80,10 @@
         <ul class="content__list">
           <template class="cards-list-item-template">
             <li class="content__list-item">
-              <a href="#0" class="content__card-link">
+              <a
+                href="#0"
+                class="content__card-link content__card-link_current"
+              >
                 <article class="content__video-card">
                   <div class="content__video-card-description-container">
                     <h2 class="content__video-card-title"></h2>
