@@ -146,16 +146,18 @@ ol {
 
 .content__list-item:active {
   background-color: #545050;
-}
-
-.content__card-link_current:focus-within {
-  background-color: #545050;
-  height: 103px;
+  max-width: fit-content;
 }
 
 .content__card-link:focus {
   outline: 0;
   border: 1px solid #fff;
+}
+
+.content__card-link_current:focus-within {
+  background-color: #545050;
+  border: none;
+  height: 103px;
 }
 
 .content__details {
