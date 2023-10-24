@@ -144,11 +144,6 @@ ol {
   text-decoration: underline;
 }
 
-.content__list-item:active {
-  background-color: #545050;
-  max-width: fit-content;
-}
-
 .content__card-link:focus {
   outline: 0;
   border: 1px solid #fff;
@@ -158,6 +153,13 @@ ol {
   background-color: #545050;
   border: none;
   height: 103px;
+}
+
+.content__list-item:active {
+  background-color: #545050;
+  max-width: fit-content;
+  border: none;
+  outline: 0;
 }
 
 .content__details {
