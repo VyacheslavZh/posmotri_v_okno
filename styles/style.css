@@ -146,13 +146,14 @@ ol {
 
 .content__card-link:focus {
   outline: 0;
+}
+
+.content__card-link:focus-visible {
   border: 1px solid #fff;
 }
 
-.content__card-link_current:focus-within {
+.content__card-link_current {
   background-color: #545050;
-  border: none;
-  height: 103px;
 }
 
 .content__list-item:active {
@@ -182,7 +183,7 @@ ol {
   max-height: 101px;
   object-position: center;
   object-fit: cover;
-  margin-bottom: 10px;
+  padding-top: 3px;
 }
 
 .content__video-card-description-container {
@@ -219,7 +220,7 @@ ol {
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
-  line-height: 35px;
+  line-height: 30px;
   text-transform: uppercase;
   margin-top: 3px;
 }
